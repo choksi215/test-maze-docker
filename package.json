@@ -1,0 +1,10 @@
+{
+    "name": "a_maze_ingly_retro_route_puzzle",
+    "version": "1.0.0",
+    "description": "test for docker",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "choksia"
+}
