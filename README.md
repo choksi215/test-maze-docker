@@ -85,7 +85,6 @@ Output
 
 | ID | Room | Object collected|
 |----|------|-----------------|
-
 |4| Sun Room|None|
 |6| Bathroom|None|
 |4| Sun Room |None|
