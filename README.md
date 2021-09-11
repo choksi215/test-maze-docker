@@ -24,7 +24,8 @@ Object type allowed fields
   name: String //Object Name
 ```
 
-Example
+
+Example 1
 -------
 
 Map
@@ -56,7 +57,48 @@ Output
 |2|Dining Room|None|
 |4|Sun Room|Potted Plant|
 
-Additional Goals
+Example 2
+-------
+
+Map
+```json
+{
+    "rooms": [
+        { "id": 1, "name": "Hallway", "north": 2, "east":7, "objects":[] },
+        { "id": 2, "name": "Dining Room", "north": 5, "south": 1, "west": 3, "east": 4, "objects": [] },
+        { "id": 3, "name": "Kitchen","east":2, "objects": [ { "name": "Knife" } ] },
+        { "id": 4, "name": "Sun Room","west":2, "north":6, "south":7, "objects": [] },
+        { "id": 5, "name": "Bedroom","south":2, "east":6, "objects": [{ "name": "Pillow" }] },
+        { "id": 6, "name": "Bathroom","west":5, "south":4, "objects": [] },
+        { "id": 7, "name": "Living room","west":1, "north":4, "objects": [{ "name": "Potted Plant" }] }
+    ]
+}
+```
+
+Input
+```
+Start Room ID = 4
+Objects To Collect = Knife, Potted Plant, Pillow
+```
+
+Output
+
+| ID | Room | Object collected|
+|----|------|-----------------|
+
+|4| Sun Room|None|
+|6| Bathroom|None|
+|4| Sun Room |None|
+|7| Living room |Potted Plant|
+|4| Sun Room |None|
+|2| Dining Room |None|
+|5| Bedroom| Pillow|
+|2| Dining Room |None|
+|1| Hallway |None|
+|2| Dining Room |None|
+|3| Kitchen |Knife|
+
+Goals
 ----------------
   - [x] TDD approach.
   - [x] Build a Docker container with runnable code inside so that we can mount a volume in it and test on different maps.
