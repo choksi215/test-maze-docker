@@ -1,10 +1,6 @@
-__A-Maze-ingly Retro Route Puzzle__
-
-This is a JSON variant of [the problem described by this blog post](http://www.jonarcher.com/2010_01_01_archive.html).
-
+__A-Maze-ingly Retro Route Puzzle__ 
 Problem
 -------
-
 Write a program that will output a valid route one could follow to collect all specified items within a map.
 The map is a json description of set of rooms with allowed path and contained object.
 
